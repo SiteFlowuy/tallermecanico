@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodrigo Molina | Hyundai</title>
+    <meta name="description" content="Especialistas en chapa, pintura y mecánica general en Montevideo. Servicio oficial Hyundai y multimarca con garantía.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'hyundai-blue': '#002C5F',
+                        'electric-blue': '#0A84FF',
+                        'carbon': '#121212',
+                        'dark-gray': '#2E2E2E',
+                        'medium-gray': '#6B7280',
+                        'light-gray': '#E5E7EB',
+                        'cta-red': '#E63946',
+                        'accent-yellow': '#F4B400',
+                    },
+                    fontFamily: {
+                        sans:['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-light-gray text-dark-gray font-sans antialiased overflow-x-hidden selection:bg-electric-blue selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-deep-blue text-white shadow-lg transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i data-lucide="wrench" class="text-electric-blue h-8 w-8"></i>
+                    <span class="font-bold text-xl tracking-tight">Taller Rodrigo Molina</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#servicios" class="text-sm font-medium hover:text-electric-blue transition-colors">Servicios</a>
+                    <a href="#nosotros" class="text-sm font-medium hover:text-electric-blue transition-colors">Nosotros</a>
+                    <a href="#contacto" class="text-sm font-medium hover:text-electric-blue transition-colors">Ubicación</a>
+                    <a href="#agenda" class="bg-cta-red hover:bg-red-700 text-white px-6 py-2.5 rounded-md font-semibold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Agendar Turno</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <a href="https://wa.me/59899000000" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all hover:scale-110 flex items-center justify-center group">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+        <span class="absolute right-16 bg-white text-dark-gray px-3 py-1 rounded shadow-md text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">¡Escribinos!</span>
+    </a>
+
+    <section class="relative h-screen flex items-center justify-center pt-20">
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+        <img src="https://images.unsplash.com/photo-1613214149922-f1809c99b414?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Taller moderno" class="absolute inset-0 w-full h-full object-cover">
+        
+        <div class="relative z-20 text-center px-4 max-w-4xl mx-auto mt-16" id="hero-content">
+            <span class="inline-block py-1 px-3 rounded-full bg-hyundai-blue/80 text-white text-sm font-semibold tracking-wider mb-4 border border-electric-blue/30 backdrop-blur-sm">CALIDAD PREMIUM</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Taller oficial Hyundai y multimarca en Montevideo</h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 font-light">Chapa, pintura y mecánica con garantía asegurada.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#agenda" class="bg-electric-blue hover:bg-blue-600 text-white px-8 py-4 rounded-md font-semibold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <i data-lucide="calendar"></i> Agendar servicio
+                </a>
+                <a href="#agenda" class="bg-transparent border-2 border-white hover:bg-white hover:text-deep-blue text-white px-8 py-4 rounded-md font-semibold text-lg transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="file-text"></i> Solicitar presupuesto
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-header">
+                <h2 class="text-3xl md:text-4xl font-bold text-deep-blue mb-4">Nuestros Servicios</h2>
+                <div class="w-24 h-1 bg-electric-blue mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light-gray rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group service-card">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1632823462943-4cedf2130e52?auto=format&fit=crop&w=600&q=80" alt="Chapa y pintura" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-hyundai-blue mb-2">Chapa y Pintura</h3>
+                        <p class="text-medium-gray mb-4">Restauración estética con tecnología de colorimetría avanzada y acabados de fábrica.</p>
+                        <a href="#agenda" class="text-electric-blue font-semibold hover:text-deep-blue flex items-center gap-1 transition-colors">
+                            Agendar <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-light-gray rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group service-card">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=80" alt="Mecánica General" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-hyundai-blue mb-2">Mecánica General</h3>
+                        <p class="text-medium-gray mb-4">Mantenimiento preventivo, frenos, suspensión y reparación de motores.</p>
+                        <a href="#agenda" class="text-electric-blue font-semibold hover:text-deep-blue flex items-center gap-1 transition-colors">
+                            Agendar <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-light-gray rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group service-card">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=600&q=80" alt="Servicio Oficial Hyundai" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-hyundai-blue mb-2">Servicio Oficial Hyundai</h3>
+                        <p class="text-medium-gray mb-4">Garantía oficial, repuestos originales y técnicos certificados por la marca.</p>
+                        <a href="#agenda" class="text-electric-blue font-semibold hover:text-deep-blue flex items-center gap-1 transition-colors">
+                            Agendar <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-light-gray rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group service-card">
+                    <div class="h-48 overflow-hidden relative flex items-center justify-center bg-dark-gray">
+                        <i data-lucide="cpu" class="w-20 h-20 text-electric-blue group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-hyundai-blue mb-2">Diagnóstico Computarizado</h3>
+                        <p class="text-medium-gray mb-4">Escáner de última generación para detección precisa de fallas electrónicas.</p>
+                        <a href="#agenda" class="text-electric-blue font-semibold hover:text-deep-blue flex items-center gap-1 transition-colors">
+                            Agendar <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-light-gray rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group service-card lg:col-span-2">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80" alt="Seguros" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-hyundai-blue mb-2">Seguros y Siniestros</h3>
+                        <p class="text-medium-gray mb-4">Trabajamos con todas las aseguradoras del país. Gestionamos tu siniestro de forma ágil para que tu auto vuelva a la calle rápido y en perfectas condiciones.</p>
+                        <a href="#agenda" class="text-electric-blue font-semibold hover:text-deep-blue flex items-center gap-1 transition-colors">
+                            Agendar <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agenda" class="py-24 bg-deep-blue relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                <div class="p-10 md:w-1/2 bg-hyundai-blue text-white flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold mb-4">Agendá tu visita</h2>
+                    <p class="text-blue-100 mb-8 font-light leading-relaxed">Completá el formulario para reservar tu turno o solicitar un presupuesto sin cargo. Nuestro equipo te contactará a la brevedad para confirmar.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-electric-blue"></i>
+                            <span class="text-sm">Respuesta rápida</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-electric-blue"></i>
+                            <span class="text-sm">Presupuestos transparentes</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-electric-blue"></i>
+                            <span class="text-sm">Garantía en cada trabajo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-10 md:w-1/2 bg-white">
+                    <form id="booking-form" class="space-y-5">
+                        <div>
+                            <label class="block text-sm font-medium text-dark-gray mb-1">Nombre y Apellido</label>
+                            <input type="text" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-electric-blue focus:border-electric-blue outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-dark-gray mb-1">Teléfono</label>
+                            <input type="tel" id="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-electric-blue focus:border-electric-blue outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-dark-gray mb-1">Vehículo (Marca, Modelo, Año)</label>
+                            <input type="text" id="vehicle" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-electric-blue focus:border-electric-blue outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-dark-gray mb-1">Servicio requerido</label>
+                            <select id="service" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-electric-blue focus:border-electric-blue outline-none transition-all">
+                                <option value="" disabled selected>Seleccioná un servicio</option>
+                                <option value="Chapa y pintura">Chapa y pintura</option>
+                                <option value="Mecánica general">Mecánica general</option>
+                                <option value="Servicio Oficial Hyundai">Servicio Oficial Hyundai</option>
+                                <option value="Diagnóstico">Diagnóstico computarizado</option>
+                                <option value="Presupuesto/Otro">Presupuesto / Otro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-dark-gray mb-1">Mensaje (Opcional)</label>
+                            <textarea id="message" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-electric-blue focus:border-electric-blue outline-none transition-all resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-cta-red hover:bg-red-700 text-white font-bold py-3 px-4 rounded-md transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                            Reservar turno
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-light-gray overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl font-bold text-deep-blue mb-8">Con la confianza de las mejores marcas y aseguradoras</h3>
+                <div class="flex flex-wrap justify-center items-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Hyundai_Motor_Company_logo.svg" alt="Hyundai" class="h-10">
+                    <div class="text-2xl font-bold text-dark-gray">BSE</div>
+                    <div class="text-2xl font-bold text-dark-gray">MAPFRE</div>
+                    <div class="text-2xl font-bold text-dark-gray">PORTO SEGURO</div>
+                    <div class="text-2xl font-bold text-dark-gray">SURA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=800&q=80" alt="Nuestro taller" class="w-full h-auto">
+                        <div class="absolute bottom-0 left-0 bg-electric-blue text-white p-6">
+                            <p class="text-4xl font-bold mb-1">+15</p>
+                            <p class="text-sm font-medium">Años de experiencia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-deep-blue mb-6">Excelencia técnica para tu tranquilidad</h2>
+                    <p class="text-lg text-medium-gray mb-6 leading-relaxed">
+                        Ubicados en el corazón de Montevideo, somos un taller integral automotriz dedicado a devolverle a tu vehículo su estado original, tanto en rendimiento como en estética.
+                    </p>
+                    <p class="text-lg text-medium-gray mb-8 leading-relaxed">
+                        Como <strong class="text-hyundai-blue">Servicio Oficial Hyundai</strong>, contamos con capacitación directa de fábrica y herramientas específicas. Al mismo tiempo, nuestra experiencia multimarca nos permite atender vehículos de todos los orígenes con el mismo rigor y calidad.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-start gap-3">
+                            <div class="bg-light-gray p-2 rounded-lg text-electric-blue">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark-gray">Garantía</h4>
+                                <p class="text-sm text-medium-gray">Respaldo total en reparaciones</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="bg-light-gray p-2 rounded-lg text-electric-blue">
+                                <i data-lucide="tool"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark-gray">Tecnología</h4>
+                                <p class="text-sm text-medium-gray">Equipamiento de última generación</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 bg-light-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col lg:flex-row">
+                <div class="lg:w-1/3 p-10 bg-deep-blue text-white">
+                    <h2 class="text-3xl font-bold mb-8">Ubicación y Contacto</h2>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="map-pin" class="text-electric-blue mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg">Dirección</h4>
+                                <p class="text-blue-100 mt-1">Av. Italia 1234<br>Montevideo, Uruguay</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="clock" class="text-electric-blue mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg">Horario</h4>
+                                <p class="text-blue-100 mt-1">Lunes a Viernes: 08:00 - 18:00<br>Sábados: 09:00 - 13:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="phone" class="text-electric-blue mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-lg">Teléfono</h4>
+                                <p class="text-blue-100 mt-1">+598 2123 4567<br>+598 99 000 000 (WhatsApp)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 flex flex-col gap-3">
+                        <a href="https://maps.google.com" target="_blank" class="bg-electric-blue hover:bg-blue-600 text-center text-white px-6 py-3 rounded-md font-semibold transition-colors flex justify-center items-center gap-2">
+                            <i data-lucide="navigation" class="w-5 h-5"></i> Cómo llegar
+                        </a>
+                        <a href="tel:+59821234567" class="bg-transparent border border-white hover:bg-white hover:text-deep-blue text-center text-white px-6 py-3 rounded-md font-semibold transition-colors flex justify-center items-center gap-2">
+                            <i data-lucide="phone-call" class="w-5 h-5"></i> Llamar ahora
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-2/3 min-h-[400px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104715.35266852332!2d-56.26251261546252!3d-34.825656123011385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80ffc63bf7d3%3A0x6b321b2e355cecb5!2sMontevideo%2C%20Uruguay!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-cta-red text-white text-center px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">¿Necesitás reparar tu auto hoy?</h2>
+            <p class="text-xl mb-10 text-red-100">Contáctanos ahora y asegurate el mejor servicio para tu vehículo.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#agenda" class="bg-white text-cta-red hover:bg-gray-100 px-8 py-4 rounded-md font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Agendar turno
+                </a>
+                <a href="https://wa.me/59899000000" target="_blank" class="bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-md font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <i data-lucide="message-circle"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-carbon text-medium-gray py-12 border-t border-dark-gray text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-center items-center gap-2 mb-6 text-white">
+                <i data-lucide="wrench"></i>
+                <span class="font-bold text-xl">AutoService MVD</span>
+            </div>
+            <p class="mb-4">Taller oficial Hyundai y multimarca. Chapa, pintura y mecánica general en Montevideo.</p>
+            <p class="text-sm">&copy; 2026 AutoService MVD. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
